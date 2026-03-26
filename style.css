@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 6px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 6px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+table {
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: #334155;
+}
+
+th, td {
+    padding: 12px;
+}
+
+tr:hover {
+    background: #334155;
+}
+
+.verde { color: #22c55e; font-weight: bold; }
+.amarelo { color: #facc15; font-weight: bold; }
+.vermelho { color: #ef4444; font-weight: bold; }
+
+.grafico-container {
+    width: 60%;
+    margin: 40px auto;
+}
+
+#resultadoCardapio {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

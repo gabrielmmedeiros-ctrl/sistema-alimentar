@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sistema Alimentar Inteligente</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📊 Sistema Alimentar Inteligente</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Adicionar Item</h2>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="number" id="estoqueInput" placeholder="Estoque">
+        <button onclick="addItem()">Adicionar</button>
+    </div>
+
+    <div class="card">
+        <h2>Movimentação</h2>
+        <input type="text" id="itemNome" placeholder="Item">
+        <input type="number" id="quantidade" placeholder="Quantidade">
+        <button onclick="entrada()">Entrada</button>
+        <button onclick="saida()">Saída</button>
+    </div>
+
+</div>
+
+<h2>📦 Estoque</h2>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Estoque</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody id="lista"></tbody>
+</table>
+
+<div class="grafico-container">
+<h2>📈 Consumo</h2>
+<canvas id="grafico"></canvas>
+</div>
+
+<div class="centralizar">
+<div class="card">
+<h2>📄 Relatórios</h2>
+<button onclick="exportarExcel()">Exportar Excel</button>
+<button onclick="resetar()">Resetar Sistema</button>
+</div>
+</div>
+
+<h2>🍽️ Cardápio Inteligente</h2>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Adicionar ao Cardápio</h3>
+
+        <select id="refeicao">
+            <option value="Lanche">Lanche</option>
+            <option value="Almoço">Almoço</option>
+            <option value="Janta">Janta</option>
+        </select>
+
+        <input type="text" id="ingrediente" placeholder="Ingrediente">
+        <input type="number" id="qtdPessoa" placeholder="Qtd por pessoa (g)">
+        
+        <button onclick="addCardapio()">Adicionar</button>
+    </div>
+
+    <div class="card">
+        <h3>Calcular Consumo</h3>
+
+        <input type="number" id="numPessoas" placeholder="Número de pessoas">
+
+        <button onclick="calcularCardapio()">Calcular</button>
+
+        <div id="resultadoCardapio"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
